@@ -10,7 +10,7 @@ class Artwork:
 
     # Getter for title
     def get_title(self):
-        return self.__title  # Returns the title of the artwork
+        return self.title  # Returns the title of the artwork
 
     # Setter for title
     def set_title(self, title):
@@ -30,23 +30,23 @@ class Artwork:
 
     # Setter for date_of_creation
     def set_date_of_creation(self, date_of_creation):
-        self.__date_of_creation = date_of_creation  # Sets the date of creation of the artwork to the provided value
+        self.date_of_creation = date_of_creation  # Sets the date of creation of the artwork to the provided value
 
     # Getter for historical_significance
     def get_historical_significance(self):
-        return self.__historical_significance  # Returns the historical significance of the artwork
+        return self.historical_significance  # Returns the historical significance of the artwork
 
     # Setter for historical_significance
     def set_historical_significance(self, historical_significance):
-        self.__historical_significance = historical_significance  # Sets the historical significance of the artwork to the provided value
+        self.historical_significance = historical_significance  # Sets the historical significance of the artwork to the provided value
 
     # Getter for location
     def get_location(self):
-        return self.__location  # Returns the location of the artwork
+        return self.location  # Returns the location of the artwork
 
     # Setter for location
     def set_location(self, location):
-        self.__location = location  # Sets the location of the artwork to the provided value
+        self.location = location  # Sets the location of the artwork to the provided value
 
     # String representation of the Artwork object
     def __str__(self):
