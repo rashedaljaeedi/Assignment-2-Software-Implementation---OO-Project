@@ -46,9 +46,6 @@ class Visitor:
     def set_tickets(self, tickets):
          self.__tickets = tickets
 
-    def purchase_ticket(self, ticket):  # Method to purchase a ticket for an event
-        self.__tickets.append(ticket)  # Adding the purchased ticket to the list of tickets
-        return f"Ticket purchased for {ticket.__event_details}."  # Returning a confirmation message with event details
 
     def __str__(self):  # Method to represent Visitor object as a string
         return f"Visitor: {self.__name}, Age: {self.__age}, Contact: {self.__contact}, Category: {self.__category}"  # Formatting string representation
