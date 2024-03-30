@@ -48,7 +48,7 @@ class Ticket:
         self.__price = price
 
     def add_visitor(self, visitor):
-        self.__visitors.append(visitor)
+        self.visitors.append(visitor)
 
 
 
