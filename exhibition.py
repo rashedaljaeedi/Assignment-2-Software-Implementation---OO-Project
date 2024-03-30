@@ -41,7 +41,7 @@ class Exhibition:
 
     # Method to add an artwork to the exhibition
     def add_artwork(self, artwork):
-        self.__artworks.append(artwork)  # Appending artwork to the list of artworks
+        self.artworks.append(artwork)  # Appending artwork to the list of artworks
 
 
     # Method to represent Exhibition object as a string
