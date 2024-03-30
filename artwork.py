@@ -47,7 +47,8 @@ class Artwork:
     # Setter for location
     def set_location(self, location):
         self.__location = location  # Sets the location of the artwork to the provided value
-
+        
+    # Method to add an exhibition to the artwork
     def add_exhibition(self, exhibition):
         self.exhibitions.append(exhibition)
         
