@@ -4,7 +4,7 @@ class Exhibition:
         self.__title = title  # Assigning title attribute
         self.__duration = duration  # Assigning duration attribute
         self.__location = location  # Assigning location attribute
-        self.__artworks = []  # Initializing empty list to store artworks associated with the exhibition
+        self.artworks = []  # Initializing empty list to store artworks associated with the exhibition
 
 
     # Getter for title
