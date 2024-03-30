@@ -37,14 +37,14 @@ def test_new_special_event():
 # Test function to create and print details of a Tour object
 def test_new_tour():
     # Creating a Tour object with title, duration, location, and guide
-    tour = Tour("Historical Art Tour", "March 1 - April 30, 2024", "Permanent Galleries", "Ahmed Smith")
+    tour = Tour("Historical Art Tour", "March 30 - April 30, 2024", "Permanent Galleries", "Ahmed Smith")
     # Printing details of the Tour object
     print(tour)
 
 # Test function to create and print ticket details for various scenarios
 def test_calculate_ticket_price():
     # Creating a Visitor object for an adult visitor
-    adult_visitor = Visitor("John Doe", 30, "john@example.com", "adult")
+    adult_visitor = Visitor("james andrew", 30, "050567421", "adult")
     # Creating a Ticket object for the adult visitor
     adult_ticket = Ticket("Exhibition", "Picasso Exhibition", adult_visitor)
     # Printing details of the visitor, exhibition, ticket price, and receipt
@@ -53,7 +53,7 @@ def test_calculate_ticket_price():
     print(f"Receipt for: {adult_visitor.name} paid price {adult_ticket.price} AED for {adult_ticket.event_details}")
 
     # Creating a Visitor object for a child visitor
-    child_visitor = Visitor("Jane Doe", 10, "jane@example.com", "child")
+    child_visitor = Visitor("ahmed zayed", 10, "0509872345", "child")
     # Creating a Ticket object for the child visitor
     child_ticket = Ticket("Exhibition", "Picasso Exhibition", child_visitor)
     # Printing details of the visitor, exhibition, ticket price, and receipt
@@ -61,10 +61,41 @@ def test_calculate_ticket_price():
         f"\nVisitor: {child_visitor.name}, Age: {child_visitor.age}, Contact: {child_visitor.contact}, Category: {child_visitor.category} ")
     print(f"Receipt for: {child_visitor.name} paid price {child_ticket.price} AED for {child_ticket.event_details}")
 
-    # Similar test scenarios repeated for senior, teacher, and student visitors...
+   # Test for a senior visitor
+   # Creating a Visitor object for a senior visitor
+   senior_visitor = Visitor("Alice", 65, "alice@example.com", "senior")
+   # Creating a Ticket object for the senior visitor
+   senior_ticket = Ticket("Exhibition", "Picasso Exhibition", senior_visitor)
+   # Print visitor details, exhibition, ticket price, and receipt
+   print(
+       f"\nVisitor: {senior_visitor.name}, Age: {senior_visitor.age}, Contact: {senior_visitor.contact},Category: {senior_visitor.category} ")
+   print(
+       f"Receipt for: {senior_visitor.name} paid price {senior_ticket.price} AED for {senior_ticket.event_details}")
+
+   # Test for a teacher visitor
+   # Creating a Visitor object for a teacher visitor
+   teacher_visitor = Visitor("Abdullah", 40, "abdullah@example.com", "teacher")
+   # Creating a Visitor object for a teacher visitor
+   teacher_ticket = Ticket("Exhibition", "Picasso Exhibition", teacher_visitor)
+   # Print visitor details, exhibition, ticket price, and receipt
+   print(
+       f"\nVisitor: {teacher_visitor.name}, Age: {teacher_visitor.age}, Contact: {teacher_visitor.contact}, Category: {teacher_visitor.category} ")
+   print(
+       f"Receipt for: {teacher_visitor.name} paid price {teacher_ticket.price} AED for {teacher_ticket.event_details}")
+
+   # Test for a student visitor
+   # Creating a Visitor object for a student visitor
+   student_visitor = Visitor("mayed", 20, "mayed@example.com", "student")
+   # Creating a Visitor object for a student visitor
+   student_ticket = Ticket("Exhibition", "Picasso Exhibition", student_visitor)
+   # Print visitor details, exhibition, ticket price, and receipt
+   print(
+       f"\nVisitor: {student_visitor.name}, Age: {student_visitor.age}, Contact: {student_visitor.contact}, Category: {student_visitor.category} ")
+   print(
+       f"Receipt for: {student_visitor.name} paid price {student_ticket.price} AED for {student_ticket.event_details}")
 
     # Creating a SpecialEvent object for a charity concert
-    special_event = SpecialEvent("Charity Concert", "April 1, 2024", "Outdoor Space", "Fundraising")
+    special_event = SpecialEvent("Charity Concert", "April 1, 2024", "Outdoor Space", "Fundraising for cancer")
     # Setting individual ticket price for the special event
     special_event.price = 100
     # Creating a Ticket object for the special event
@@ -76,7 +107,7 @@ def test_calculate_ticket_price():
         f"Receipt for: {adult_visitor.name} paid price {special_event_ticket.price} AED for {special_event.title}")
 
     # Creating a group leader Visitor object for a tour
-    group_leader = Visitor("Alice Smith", 28, "0509129234", "adult")
+    group_leader = Visitor("west Smith", 19, "0509129234", "adult")
     # Defining group size for the tour
     group_size = 20
     # Creating a Ticket object for the tour group
