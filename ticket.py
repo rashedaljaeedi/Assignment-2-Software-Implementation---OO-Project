@@ -1,57 +1,57 @@
 class Ticket:
     def __init__(self, ticket_type, event_details, visitor, group=False):  # Constructor to initialize Ticket objects
-        self.ticket_type = ticket_type  # Assigning ticket_type attribute
-        self.event_details = event_details  # Assigning event_details attribute
-        self.visitor = visitor  # Assigning visitor attribute, representing the visitor associated with the ticket
-        self.group = group  # Assigning group attribute, indicating whether the ticket is for a group
-        self.price = self.calculate_price()  # Calculating the price attribute using the calculate_price method
+        self.__ticket_type = ticket_type  # Assigning ticket_type attribute
+        self.__event_details = event_details  # Assigning event_details attribute
+        self.__visitor = visitor  # Assigning visitor attribute, representing the visitor associated with the ticket
+        self.__group = group  # Assigning group attribute, indicating whether the ticket is for a group
+        self.__price = self.calculate_price()  # Calculating the price attribute using the calculate_price method
 
         # Getter for ticket_type
     def get_ticket_type(self):
-        return self.ticket_type
+        return self.__ticket_type
 
         # Setter for ticket_type
     def set_ticket_type(self, ticket_type):
-        self.ticket_type = ticket_type
+        self.__ticket_type = ticket_type
 
         # Getter for event_details
     def get_event_details(self):
-        return self.event_details
+        return self.__event_details
 
         # Setter for event_details
     def set_event_details(self, event_details):
-        self.event_details = event_details
+        self.__event_details = event_details
 
         # Getter for visitor
     def get_visitor(self):
-        return self.visitor
+        return self.__visitor
 
         # Setter for visitor
     def set_visitor(self, visitor):
-        self.visitor = visitor
+        self.__visitor = visitor
 
         # Getter for group
     def get_group(self):
-        return self.group
+        return self.__group
 
         # Setter for group
     def set_group(self, group):
-        self.group = group
+        self.__group = group
 
         # Getter for price
     def get_price(self):
-        return self.price
+        return self.__price
 
         # Setter for price
     def set_price(self, price):
-        self.price = price
+        self.__price = price
 
     def calculate_price(self):  # Method to calculate the price of the ticket
         base_price = 63  # Base price in AED
         vat_rate = 0.05  # VAT rate
 
         # Free ticket for children, teachers, students, and seniors
-        if self.visitor.age < 18 or self.visitor.age >= 60 or self.visitor.category in ["teacher", "student"]:
+        if self.__visitor.age < 18 or self.__visitor.age >= 60 or self.__visitor.category in ["teacher", "student"]:
             return 0  # Return 0 price for eligible visitors
 
         # 50% discount for groups
