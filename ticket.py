@@ -5,7 +5,7 @@ class Ticket:
         self.__visitor = visitor  # Assigning visitor attribute, representing the visitor associated with the ticket
         self.__group = group  # Assigning group attribute, indicating whether the ticket is for a group
         self.__price = self.calculate_price()  # Calculating the price attribute using the calculate_price method
-
+        self.visitors = []
 
     # Getter for ticket_type
     def get_ticket_type(self):
@@ -46,6 +46,10 @@ class Ticket:
     # Setter for price
     def set_price(self, price):
         self.__price = price
+
+    def add_visitor(self, visitor):
+        self.__visitors.append(visitor)
+
 
 
     def calculate_price(self):  # Method to calculate the price of the ticket
