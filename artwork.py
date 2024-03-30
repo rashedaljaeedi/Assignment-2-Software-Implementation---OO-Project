@@ -7,7 +7,7 @@ class Artwork:
         self.__date_of_creation = date_of_creation  # Date when the artwork was created
         self.__historical_significance = historical_significance  # Historical significance of the artwork
         self.__location = location  # Location where the artwork is currently located
-
+        self.exhibitions = []
     # Getter for title
     def get_title(self):
         return self.__title  # Returns the title of the artwork
@@ -47,6 +47,9 @@ class Artwork:
     # Setter for location
     def set_location(self, location):
         self.__location = location  # Sets the location of the artwork to the provided value
+
+    def add_exhibition(self, exhibition):
+        self.exhibitions.append(exhibition)
         
     # String representation of the Artwork object
     def __str__(self):
