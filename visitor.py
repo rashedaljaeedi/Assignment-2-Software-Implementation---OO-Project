@@ -45,6 +45,11 @@ class Visitor:
         # Setter for tickets
     def set_tickets(self, tickets):
          self.__tickets = tickets
+        
+    def purchase_ticket(self, ticket):
+        self.__tickets.append(ticket)
+        ticket.set_visitor(self)
+
 
 
     def __str__(self):  # Method to represent Visitor object as a string
