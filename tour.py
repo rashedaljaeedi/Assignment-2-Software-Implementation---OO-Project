@@ -17,5 +17,7 @@ class Tour(Exhibition):
     def __str__(self):
         return f"\n {self.__title} by {self.__guide}, duration of the tour on {self.__duration}, located in {self.__location}"
 
+
+
     
 
