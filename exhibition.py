@@ -1,5 +1,6 @@
 class Exhibition:
     def __init__(self, title, duration, location):  # Constructor to initialize Exhibition objects
+        # Initialize attributes with provided values
         self.__title = title  # Assigning title attribute
         self.__duration = duration  # Assigning duration attribute
         self.__location = location  # Assigning location attribute
